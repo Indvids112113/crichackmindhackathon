@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>IMPACT IQ – Cricket Intelligence Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- LANDING PAGE: Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>When Pressure Peaks… Who Delivers?</h1>
+      <p class="hero-subtext">Unleash AI-powered cricket intelligence. Analyze impact, pressure, and performance like never before.</p>
+      <div class="impact-meter-hero" aria-label="Impact Meter" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+        <span class="impact-score">72</span>
+      </div>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" id="enterDashboardBtn">Enter Dashboard</button>
+        <button class="btn btn-secondary" id="seeHowBtn">See How It Works</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT COMMAND CENTER (Dashboard) -->
+  <main class="dashboard" id="dashboard">
+    <div class="dashboard-grid">
+      <!-- LEFT PANEL: Player Intelligence Card -->
+      <aside class="dashboard-panel left-panel">
+        <div class="player-card">
+          <div class="player-avatar">
+            <!-- Placeholder SVG for player image -->
+            <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="30" fill="#222" stroke="#444" stroke-width="4"/>
+              <circle cx="32" cy="26" r="12" fill="#333"/>
+              <ellipse cx="32" cy="48" rx="16" ry="10" fill="#333"/>
+            </svg>
+          </div>
+          <div class="player-info">
+            <input type="text" class="player-search" placeholder="Search player…" aria-label="Search player">
+            <select class="player-dropdown" aria-label="Select team">
+              <option>All Teams</option>
+              <option>India</option>
+              <option>Australia</option>
+              <option>England</option>
+              <option>South Africa</option>
+            </select>
+            <select class="player-dropdown" aria-label="Select role">
+              <option>All Roles</option>
+              <option>Batsman</option>
+              <option>Bowler</option>
+              <option>All-rounder</option>
+              <option>Wicketkeeper</option>
+            </select>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CENTER PANEL: Large Impact Meter -->
+      <section class="dashboard-panel center-panel">
+        <div class="impact-meter-large" aria-label="Impact Meter" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+          <span class="impact-score-large">50</span>
+          <span class="impact-baseline">Baseline</span>
+          <span class="impact-trend up">▲</span>
+        </div>
+      </section>
+
+      <!-- RIGHT PANEL: Stacked Metric Cards -->
+      <aside class="dashboard-panel right-panel">
+        <div class="metric-card">
+          <div class="metric-title">Performance Engine</div>
+          <div class="metric-bar" style="--value: 0.8"></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">Context Multiplier</div>
+          <div class="metric-bar" style="--value: 0.6"></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">Pressure Index</div>
+          <div class="metric-bar" style="--value: 0.9"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ROLLING 10 INNINGS SECTION -->
+  <section class="rolling-innings">
+    <h2>Rolling 10 Innings</h2>
+    <div class="innings-graph">
+      <!-- Simple SVG line graph mock -->
+      <svg width="320" height="60" viewBox="0 0 320 60" aria-label="Innings Trend">
+        <polyline
+          fill="none"
+          stroke="#00e676"
+          stroke-width="3"
+          points="0,50 32,40 64,45 96,30 128,35 160,20 192,25 224,15 256,30 288,10 320,20"
+        />
+      </svg>
+    </div>
+    <div class="match-cards-row">
+      <div class="match-card">Match 1</div>
+      <div class="match-card">Match 2</div>
+      <div class="match-card">Match 3</div>
+      <div class="match-card">Match 4</div>
+      <div class="match-card">Match 5</div>
+      <div class="match-card">Match 6</div>
+      <div class="match-card">Match 7</div>
+      <div class="match-card">Match 8</div>
+      <div class="match-card">Match 9</div>
+      <div class="match-card">Match 10</div>
+    </div>
+  </section>
+
+  <!-- PRESSURE INTELLIGENCE LAB -->
+  <section class="pressure-lab">
+    <h2>Pressure Intelligence Lab</h2>
+    <div class="lab-grid">
+      <!-- Heatmap Grid -->
+      <div class="heatmap">
+        <!-- 5x5 grid of squares, colored by intensity -->
+        <div class="heat-cell" style="--intensity: 0.2"></div>
+        <div class="heat-cell" style="--intensity: 0.5"></div>
+        <div class="heat-cell" style="--intensity: 0.8"></div>
+        <div class="heat-cell" style="--intensity: 0.6"></div>
+        <div class="heat-cell" style="--intensity: 0.3"></div>
+        <div class="heat-cell" style="--intensity: 0.7"></div>
+        <div class="heat-cell" style="--intensity: 0.4"></div>
+        <div class="heat-cell" style="--intensity: 0.9"></div>
+        <div class="heat-cell" style="--intensity: 0.1"></div>
+        <div class="heat-cell" style="--intensity: 0.5"></div>
+        <div class="heat-cell" style="--intensity: 0.6"></div>
+        <div class="heat-cell" style="--intensity: 0.3"></div>
+        <div class="heat-cell" style="--intensity: 0.8"></div>
+        <div class="heat-cell" style="--intensity: 0.2"></div>
+        <div class="heat-cell" style="--intensity: 0.7"></div>
+        <div class="heat-cell" style="--intensity: 0.4"></div>
+        <div class="heat-cell" style="--intensity: 0.9"></div>
+        <div class="heat-cell" style="--intensity: 0.1"></div>
+        <div class="heat-cell" style="--intensity: 0.5"></div>
+        <div class="heat-cell" style="--intensity: 0.6"></div>
+        <div class="heat-cell" style="--intensity: 0.3"></div>
+        <div class="heat-cell" style="--intensity: 0.8"></div>
+        <div class="heat-cell" style="--intensity: 0.2"></div>
+        <div class="heat-cell" style="--intensity: 0.7"></div>
+      </div>
+      <!-- Radar Chart Placeholder -->
+      <div class="radar-chart">
+        <svg width="100" height="100" viewBox="0 0 100 100" aria-label="Radar Chart">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="2" opacity="0.3"/>
+          <polygon points="50,15 85,50 50,85 15,50" fill="rgba(255,255,255,0.1)" stroke="#e53935" stroke-width="2"/>
+        </svg>
+      </div>
+      <!-- Big Match Meter (Semi-circle) -->
+      <div class="semi-meter">
+        <div class="semi-circle"></div>
+        <span class="semi-meter-label">Big Match Meter</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYER COMPARISON -->
+  <section class="player-comparison">
+    <div class="comparison-col">
+      <div class="player-label">Player A</div>
+      <div class="impact-meter-compare" aria-label="Player A Impact" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+        <span class="impact-score">68</span>
+      </div>
+    </div>
+    <div class="vs-text">VS</div>
+    <div class="comparison-col">
+      <div class="player-label">Player B</div>
+      <div class="impact-meter-compare" aria-label="Player B Impact" role="progressbar" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100">
+        <span class="impact-score">74</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERBOARD -->
+  <section class="leaderboard-section">
+    <h2>Leaderboard</h2>
+    <table class="leaderboard-table" aria-label="Top Players Leaderboard">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Impact Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="rank-1">
+          <td>1</td>
+          <td>Alex Ryder</td>
+          <td>98</td>
+        </tr>
+        <tr class="rank-2">
+          <td>2</td>
+          <td>Brenda Vance</td>
+          <td>94</td>
+        </tr>
+        <tr class="rank-3">
+          <td>3</td>
+          <td>Carl Kent</td>
+          <td>91</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Diana Lane</td>
+          <td>88</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Edward Wallace</td>
+          <td>85</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- CHATBOT UI -->
+  <button class="chatbot-btn" id="chatbotBtn" aria-label="Open Impact AI Chatbot">
+    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="16" fill="#00e676"/>
+      <text x="16" y="21" text-anchor="middle" font-size="18" fill="#222" font-family="Arial" font-weight="bold">AI</text>
+    </svg>
+  </button>
+  <aside class="chatbot-panel" id="chatbotPanel" aria-modal="true" role="dialog" aria-label="Impact AI Chatbot">
+    <header class="chatbot-header">
+      <span class="chatbot-title">Impact AI</span>
+      <span class="chatbot-status online">Online</span>
+      <button class="chatbot-close" id="chatbotCloseBtn" aria-label="Close Chatbot">&times;</button>
+    </header>
+    <div class="chatbot-messages" id="chatbotMessages" aria-live="polite"></div>
+    <form class="chatbot-input-row" id="chatbotForm" autocomplete="off">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message…" aria-label="Type your message">
+      <button type="submit" class="chatbot-send" aria-label="Send Message">Send</button>
+    </form>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
