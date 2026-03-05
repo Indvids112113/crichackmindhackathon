@@ -1,0 +1,43 @@
+<div class="navbar">
+  <a href="#" class="logo">🏏 CricketReview</a>
+  <div class="menu">
+    <a href="#home" class="active">Home</a>
+    <a href="#performance">Performance</a>
+    <a href="#ranking">Ranking</a>
+    <a href="#compare">Compare</a>
+  </div>
+</div>
+
+<div id="home" class="tab-content">
+  <h2>Welcome to Cricket Performance Review</h2>
+  <p>Track, analyze, and compare cricket players with ease.</p>
+</div>
+
+<div id="performance" class="tab-content" style="display:none;">
+  <h2>Player Performance</h2>
+  <form id="addPlayerForm">
+    <input type="text" placeholder="Name" required>
+    <input type="text" placeholder="Team">
+    <input type="number" placeholder="Runs">
+    <input type="number" placeholder="Wickets">
+    <button type="submit">Add Player</button>
+  </form>
+  <div id="playerList"></div>
+</div>
+
+<div id="ranking" class="tab-content" style="display:none;">
+  <h2>Player Rankings</h2>
+  <select id="filter">
+    <option value="runs">Batting</option>
+    <option value="wickets">Bowling</option>
+    <option value="catches">Fielding</option>
+  </select>
+  <div id="rankingList"></div>
+</div>
+
+<div id="compare" class="tab-content" style="display:none;">
+  <h2>Compare Players</h2>
+  <select id="player1"></select>
+  <select id="player2"></select>
+  <canvas id="compareChart"></canvas>
+</div>
