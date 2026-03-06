@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPACT IQ | Cricket Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">IMPACT IQ</div>
+        <nav id="main-nav">
+            <a href="#" data-target="home-section" class="active">HOME</a>
+            <a href="#" data-target="performance-section">PLAYER</a>
+            <a href="#" data-target="comparison-section">PLAYER COMPARISON</a>
+            <a href="#" data-target="leaderboard-section">LEADERBOARD</a>
+        </nav>
+        <div class="nav-actions">
+            <button id="theme-toggle">🌓</button>
+            <input type="text" id="global-search" placeholder="Search Player (e.g. Virat)..." class="search-bar">
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home-section" class="card active-section">
+            <div class="legend-content">
+                <div class="avatar-circle" id="leg-avatar"></div>
+                <div class="legend-info">
+                    <p class="role-text" id="leg-role">RETIRED LEGEND</p>
+                    <h1 id="leg-name">Loading...</h1>
+                    <p id="leg-desc" style="color: var(--text-muted);">Please wait...</p>
+                    <div class="score-display">
+                        <h2 id="leg-score">--</h2>
+                        <span>CAREER IMPACT SCORE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button id="prev-legend">⬅️</button>
+                <button id="next-legend">➡️</button>
+            </div>
+        </section>
+
+        <section id="performance-section" class="card hidden">
+            <div class="player-header">
+                <div class="avatar-circle small"></div>
+                <div class="player-meta">
+                    <h1 id="perf-name">Search a player...</h1>
+                    <p id="perf-role" style="color: var(--primary-red); font-weight: bold;">--</p>
+                    <p id="perf-country">--</p>
+                </div>
+                <div class="big-score">
+                    <h1 id="perf-impact">--</h1>
+                    <span>IMPACT SCORE</span>
+                </div>
+            </div>
+            
+            <h3 style="margin: 2rem 0 1rem 0;">Recent Form (Last 10 Matches)</h3>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-box"><h3 id="perf-runs">--</h3><p>RUNS</p></div>
+                <div class="stat-box"><h3 id="perf-wickets">--</h3><p>WICKETS</p></div>
+                <div class="stat-box"><h3 id="perf-avg">--</h3><p>AVERAGE</p></div>
+                <div class="stat-box"><h3 id="perf-sr">--</h3><p>STRIKE RATE</p></div>
+            </div>
+        </section>
+
+        <section id="comparison-section" class="card hidden">
+            <h2>Player Comparison ⚔️</h2>
+            <div class="comparison-inputs">
+                <input type="text" id="comp-1" placeholder="Enter Player 1 (e.g. Virat)">
+                <input type="text" id="comp-2" placeholder="Enter Player 2 (e.g. Rohit)">
+            </div>
+            
+            <div id="comp-results" class="head-to-head">
+                <h3 style="margin-bottom: 1.5rem;">Head-to-Head Impact</h3>
+                <div class="comparison-names">
+                    <span id="name-1"><strong>Player 1</strong></span>
+                    <span id="name-2"><strong>Player 2</strong></span>
+                </div>
+                <div class="impact-bar-outer">
+                    <div class="impact-bar-fill" id="impact-bar" style="width: 50%;"></div>
+                </div>
+                <div class="scores-row">
+                    <span id="score-1">--</span>
+                    <span id="score-2">--</span>
+                </div>
+                <p class="winner-text" id="winner-msg">Enter players to compare</p>
+            </div>
+        </section>
+
+        <section id="leaderboard-section" class="card hidden">
+            <h2>World Impact Leaderboard 🏆</h2>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Role</th>
+                        <th>Impact Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="chatbot-container">
+        <div id="chatbot-window" class="hidden">
+            <div class="chat-header">Impact AI Assistant</div>
+            <div class="chat-body" id="chat-history">
+                <div class="bot-msg">Hi! I'm Impact AI. Ask me about any player's impact score!</div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="chat-send">SEND</button>
+            </div>
+        </div>
+        <button id="chat-toggle" class="chat-fab">💬</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
